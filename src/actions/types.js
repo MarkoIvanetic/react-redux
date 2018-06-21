@@ -1,0 +1,5 @@
+export const type = {
+    REMOVE_ARTICLE: 'REMOVE_ARTICLE',
+    RENAME_ARTICLE: 'RENAME_ARTICLE',
+    ADD_ARTICLE: 'ADD_ARTICLE'
+}
