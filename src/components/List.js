@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { removeArticle } from "../actions/index";
+import { removeArticle, renameArticle } from "../actions/index";
 import ListItem from "./ListItem";
 
 const mapStateToProps = state => {
@@ -9,7 +9,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    removeArticle: id => dispatch(removeArticle(id))
+    removeArticle: id => dispatch(removeArticle(id)),
+    renameArticle: (id, newName) => dispatch(renameArticle(id, newName)),
   };
 };
 
@@ -39,7 +40,7 @@ class ConnectedList extends Component {
       <div className="col-xs-12 nop">
         <ul className="list-group list-group-flush">
           {this.props.articles.map(el => (
-            <ListItem key={el.id} item={el} onRemove={() => this.props.removeArticle(el.id)} />
+            <ListItem key={el.id} item={el} onRename={(id, newName) => this.props.renameArticle(id, newName)} onRemove={(id) => this.props.removeArticle(id)} />
           ))}
         </ul>
       </div>

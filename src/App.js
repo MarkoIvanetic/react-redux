@@ -23,11 +23,11 @@ export default class App extends React.Component {
     return (
         <Provider store={store}>
           <div className="col-xs-12">
-            <div className="col-xs-6 col-md-4">
+            <div className="col-xs-12 col-sm-6">
               <h2 className="col-xs-12 nop">Articles</h2>
               <List />
             </div>
-            <div className="col-xs-6 col-md-4">
+            <div className="col-xs-12 col-sm-6">
               <h2 className="col-xs-12 nop" >Add a new article</h2>
               <Form />
             </div>
