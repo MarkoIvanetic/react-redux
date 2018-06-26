@@ -10,10 +10,6 @@ import store from "./store";
 
 import "./main.scss";
 
-window.store = store;
-window.addArticle = addArticle;
-window.removeArticle = removeArticle;
-
 export default class App extends React.Component {
   constructor() {
     super();

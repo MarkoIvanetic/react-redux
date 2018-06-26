@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
 
 export default class ListItem extends Component {
   constructor() {

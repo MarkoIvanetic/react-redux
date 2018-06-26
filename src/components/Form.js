@@ -5,6 +5,7 @@ import uuidv1 from "uuid";
 
 const mapDispatchToProps = dispatch => {
   return {
+  	// This will now be available as this.props.addFormArticle
     addFormArticle: article => dispatch(addArticle(article))
   };
 };

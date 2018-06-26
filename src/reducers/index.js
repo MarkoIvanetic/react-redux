@@ -9,7 +9,6 @@ const rootReducer = (state = initialState, action) => {
         case type.ADD_ARTICLE:
             return { ...state, articles: [...state.articles, action.payload] };
         case type.REMOVE_ARTICLE:
-        console.log("Remove called");
             return { ...state, articles: state.articles.filter(article => article.id !== action.payload) };
         case type.RENAME_ARTICLE:
             return { ...state,
